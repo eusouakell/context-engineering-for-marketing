@@ -105,3 +105,8 @@ The executable reference implementation lives in [Marketing Context System](http
 **The goal is not maximum context. The goal is minimum sufficient, authoritative context with measurable effect.**
 
 The v2 stack extends the existing [principles](principles), [patterns](patterns) and [case studies](case-studies), preserving their provenance. The [pilot case study](case-studies/marketing-context-stack-pilot.md) documents the intervention, not measured model superiority.
+
+
+## License
+
+Original research and documentation are available under **CC BY-NC-SA 4.0**, except where otherwise noted. See [LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md). Commercial reuse requires separate permission.
