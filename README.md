@@ -19,8 +19,8 @@ Flattening all of that into one prompt is not a context system.
 │ 6. GOVERNANCE                       │
 │ Decisions · permissions · owners    │
 ├─────────────────────────────────────┤
-│ 5. EVALUATION                       │
-│ Checks · sensors · evals · gates    │
+│ 5. AGENTIC HARNESS                  │
+│ Guides · guards · sensors · checks  │
 ├─────────────────────────────────────┤
 │ 4. EXECUTION                        │
 │ Skills · agents · tools             │
@@ -38,7 +38,7 @@ Flattening all of that into one prompt is not a context system.
 └─────────────────────────────────────┘
 ```
 
-Read [Marketing Context Stack v1](frameworks/marketing-context-stack.md) and the [runtime context lifecycle](frameworks/runtime-context-lifecycle.md).
+Read [Marketing Context Stack v1](frameworks/marketing-context-stack.md), the [Agentic Harness](frameworks/agentic-harness.md) and the [runtime context lifecycle](frameworks/runtime-context-lifecycle.md).
 
 ## Two different problems
 
@@ -94,6 +94,7 @@ The hypothesis is deliberately falsifiable:
 - principles for context quality and progressive disclosure;
 - reusable patterns for brand, evidence, decision, market-intelligence and memory/state context;
 - the Marketing Context Stack;
+- a provider-neutral Guides / Guards / Sensors / Checks harness model;
 - experiment protocols;
 - public-safe case studies;
 - articles connecting brand systems and runtime context.
@@ -101,6 +102,7 @@ The hypothesis is deliberately falsifiable:
 ## Start here
 
 - [Marketing Context Stack](frameworks/marketing-context-stack.md)
+- [Agentic Harness](frameworks/agentic-harness.md)
 - [Runtime context lifecycle](frameworks/runtime-context-lifecycle.md)
 - [Context ablation experiment](experiments/context-ablation-v01.md)
 - [Knowledge operating system case](case-studies/knowledge-operating-system.md)
