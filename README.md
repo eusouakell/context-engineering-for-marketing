@@ -2,17 +2,17 @@
 
 **Applied research on context systems for marketing and organizational knowledge work.**
 
-This repository studies the layer around prompts and models: how an agent's usable context is **written, selected, prioritized, compressed, isolated, assembled and verified**.
+This repository studies a layer that prompts alone do not solve: how an AI system decides **what context exists, what is authoritative, what belongs in the current task, what should be excluded, and how the result is verified**.
 
 ## Working definition
 
-> Context Engineering for Marketing is the design of systems that determine what an AI agent should know, retrieve, trust and use for a marketing task — and how the resulting work is verified.
+> **Context Engineering for Marketing** is the design of systems that determine what an AI agent should know, retrieve, trust and use for a marketing task, and how the resulting work is verified.
 
-Marketing is a useful stress test because one task may depend on different forms of context: brand strategy, market evidence, ICP and persona knowledge, offer logic, proof and claim status, historical decisions, current task state, tool results, channel constraints and human approvals.
+Marketing is a useful stress test because a single task can depend on very different context: brand strategy, market evidence, ICP/persona knowledge, offer logic, proof and claim status, historical decisions, current task state, tool results, channel constraints and human approvals.
 
-Flattening all of that into one prompt is not a system.
+Flattening all of that into one prompt is not a context system.
 
-## Marketing Context Stack v1
+## Marketing Context Stack
 
 ```text
 ┌─────────────────────────────────────┐
@@ -38,13 +38,13 @@ Flattening all of that into one prompt is not a system.
 └─────────────────────────────────────┘
 ```
 
-Read: [Marketing Context Stack v1](frameworks/marketing-context-stack.md).
+Read [Marketing Context Stack v1](frameworks/marketing-context-stack.md) and the [runtime context lifecycle](frameworks/runtime-context-lifecycle.md).
 
-## The two problems
+## Two different problems
 
-### 1. Knowledge authority
+### Knowledge authority
 
-Where is truth stored, and which source wins?
+Where does truth live, and which source wins when sources disagree?
 
 ```text
 SPEC
@@ -54,12 +54,13 @@ SPEC
 → APPLICATIONS
 ```
 
-### 2. Runtime context
+### Runtime context
 
-What from the available universe should actually enter this model call?
+What from the available context universe should enter this execution?
 
 ```text
 AVAILABLE CONTEXT
+→ VALIDATE
 → SELECT
 → PRIORITIZE
 → COMPRESS
@@ -73,7 +74,7 @@ A knowledge architecture without runtime selection is incomplete. A runtime cont
 
 ## Research program
 
-The first benchmark compares four conditions:
+The first controlled comparison uses four conditions:
 
 | Condition | Configuration |
 |---|---|
@@ -84,28 +85,41 @@ The first benchmark compares four conditions:
 
 The hypothesis is deliberately falsifiable:
 
-> Routed context should improve quality / grounding per unit of context compared with both prompt-only execution and indiscriminate context dumping.
+> Routed context should improve quality and grounding per unit of context compared with prompt-only execution and indiscriminate context dumping.
 
-No measured advantage is claimed until the benchmark is run.
+**No measured advantage is claimed until the benchmark is run.**
+
+## What is already here
+
+- principles for context quality and progressive disclosure;
+- reusable patterns for brand, evidence, decision, market-intelligence and memory/state context;
+- the Marketing Context Stack;
+- experiment protocols;
+- public-safe case studies;
+- articles connecting brand systems and runtime context.
 
 ## Start here
 
-- [Marketing Context Stack v1](frameworks/marketing-context-stack.md)
+- [Marketing Context Stack](frameworks/marketing-context-stack.md)
 - [Runtime context lifecycle](frameworks/runtime-context-lifecycle.md)
-- [Context ablation benchmark](experiments/context-ablation-v01.md)
+- [Context ablation experiment](experiments/context-ablation-v01.md)
 - [Knowledge operating system case](case-studies/knowledge-operating-system.md)
+- [Marketing Context Stack pilot](case-studies/marketing-context-stack-pilot.md)
 - [From brand manuals to runtime context](articles/from-brand-manuals-to-runtime-context.md)
 
 ## Companion implementation
 
 The executable reference implementation lives in [Marketing Context System](https://github.com/eusouakell/marketing-context-system).
 
-## Principles and provenance
+The research repo explains **why and what to test**. The implementation repo makes context selection **inspectable and executable**.
 
-**The goal is not maximum context. The goal is minimum sufficient, authoritative context with measurable effect.**
+## Research posture
 
-The v2 stack extends the existing [principles](principles), [patterns](patterns) and [case studies](case-studies), preserving their provenance. The [pilot case study](case-studies/marketing-context-stack-pilot.md) documents the intervention, not measured model superiority.
+The goal is not maximum context.
 
+The goal is **minimum sufficient, authoritative context with measurable effect**.
+
+This repository distinguishes architecture, hypothesis, intervention and measured result. A documented mechanism is not evidence of model-quality improvement.
 
 ## License
 
