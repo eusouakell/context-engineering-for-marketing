@@ -50,20 +50,29 @@ A task skill is not the same as a context system.
 
 A skill says **how to perform a task**. The context layer determines **what the task should know and trust**.
 
-## 5. Evaluation
+## 5. Agentic Harness
 
-### Deterministic checks
-Use when a rule can be validated exactly: evidence present, source status, protected identifiers, required metadata.
+The harness separates four responsibilities around execution:
 
-### Sensors
-Observe drift or risk: aging evidence, bundle growth, canonical conflicts.
+| | Feedforward | Feedback |
+|---|---|---|
+| **Descriptive** | **Guides** — context, examples, architecture, format contracts | **Sensors** — traces, manifests, drift/runtime observations |
+| **Normative** | **Guards** — permissions, schemas, policy and pre-action constraints | **Checks** — assertions, evals, tests and review criteria |
 
-### Semantic evals
-Use model judgment only when the criterion is inherently semantic: positioning fit, brand voice, executive relevance, generic language.
+This prevents several common category errors:
+
+- documentation does not become enforcement merely because an agent can read it;
+- observability does not become validation merely because a problem is visible;
+- semantic evals do not replace deterministic checks;
+- human approval can act as a Guard or Check depending on where it sits in the workflow.
+
+See [Agentic Harness for Marketing & Knowledge Work](agentic-harness.md).
 
 ## 6. Governance
 
-Defines where human accountability remains required: new positioning, new public claims, ICP changes, offer architecture changes, sensitive publication and gate overrides.
+Defines ownership, accountability and escalation across the harness: who can change Guides/Guards, who owns Sensors/Checks, and where explicit human authority remains required.
+
+Examples include new positioning, new public claims, ICP changes, offer architecture changes, sensitive publication and control overrides.
 
 ## End-to-end model
 
@@ -74,13 +83,17 @@ AUTHORITY MODEL
         ↓
 RUNTIME CONTEXT OPERATIONS
         ↓
+GUIDES + GUARDS
+        ↓
 SKILL / AGENT / TOOL
         ↓
-CHECKS + EVALS
+SENSORS
         ↓
-HUMAN GATE
+CHECKS
         ↓
-ARTIFACT + PROVENANCE
+HUMAN DECISION WHEN REQUIRED
+        ↓
+ARTIFACT + PROVENANCE + LEARN-BACK
 ```
 
 ## Design principle
