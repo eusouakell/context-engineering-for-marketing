@@ -95,6 +95,7 @@ The hypothesis is deliberately falsifiable:
 - reusable patterns for brand, evidence, decision, market-intelligence and memory/state context;
 - the Marketing Context Stack;
 - experiment protocols;
+- the seed pattern as the default lightweight implementation model;
 - public-safe case studies;
 - articles connecting brand systems and runtime context.
 
@@ -118,6 +119,20 @@ The research repo explains **why and what to test**. The implementation repo mak
 The goal is not maximum context.
 
 The goal is **minimum sufficient, authoritative context with measurable effect**.
+
+## The seed pattern (reference implementation model)
+
+Field work since this stack was drafted points to a smaller default starting point: the seed pattern.
+
+- `raw/` holds sources, immutable, with provenance.
+- `concepts/` holds compiled knowledge (thesis, lexicon, voice, principles, tokens), versioned and readable by people and agents.
+- An index and a decision log sit at the root. Agents read the index first and fetch only the concepts a task needs (progressive disclosure).
+- Three small skills operate the repository: ingest (source to raw, no interpretation), query (minimum sufficient retrieval), lint (compiled concepts checked against raw sources).
+
+The Marketing Context Stack remains the analytical reference for what a full context system covers. The seed pattern is the recommended first implementation: the minimum sufficient slice of the stack for a single brand or project, with an explicit boundary between source and compiled knowledge.
+
+[H] "Recommended" is a hypothesis at this scale, not a measured result. See experiments/cereja-ingest-validation-v01.md.
+
 
 This repository distinguishes architecture, hypothesis, intervention and measured result. A documented mechanism is not evidence of model-quality improvement.
 
