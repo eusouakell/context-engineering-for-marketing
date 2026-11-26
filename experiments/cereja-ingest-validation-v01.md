@@ -4,7 +4,7 @@ Status: proposed.
 
 ## Origin
 
-Proposed after a real restructuring event [E]: on 2026-11-26, a single-brand operation consolidated its durable brand and product decisions into one archive document and deleted three over-engineered private repositories (knowledge system, editorial engine, site). The brand context is being rebuilt on the seed pattern.
+Proposed after a real restructuring event [E]: on 2026-11-26, a single-brand operation consolidated its durable brand and product decisions into one archive document and deleted the three private repositories that previously held them (knowledge system, editorial engine, site). The brand context is being rebuilt on the seed pattern.
 
 Hypotheses [H]: at the single-brand stage, the maintenance cost of the full architecture exceeded its verification value; the seed pattern should cost less to keep current. This restructuring is not a benchmark result, and no measured advantage is claimed.
 
