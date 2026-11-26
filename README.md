@@ -122,7 +122,7 @@ The goal is **minimum sufficient, authoritative context with measurable effect**
 
 ## The seed pattern (reference implementation model)
 
-Field work since this stack was drafted points to a smaller default starting point: the seed pattern.
+This repository proposes a smaller default starting point: the seed pattern.
 
 - `raw/` holds sources, immutable, with provenance.
 - `concepts/` holds compiled knowledge (thesis, lexicon, voice, principles, tokens), versioned and readable by people and agents.
